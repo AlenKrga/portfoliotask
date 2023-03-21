@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">CSS3 effects</a></li>
+          <li><a href="#">HTML5 JS Validation</a></li>
+          <li><a href="map-canvas.html">Image map and Canvas</a></li>
+          <li><a class="active" href="#">Geolocation API</a></li>
+          <li><a href="#">CSS Transition & Animation</a></li>
+          <li><a href="#">XMLHttpRequest & JQuery Ajax</a></li>
+          <li><a href="#">Web Socet</a></li>
+          <li><a href="#">LocalStorage and Web worker</a></li>
+        </ul>
+      </nav>
+<main>
+    <h1>Locate me Geolocation</h2>
+
+        <p id="para">Locate my coordinates.</p><!--changes to show lon/lat-->
+        <button class="loc" onclick="getLocation()">Click me</button>
+        <div id="googleMap"></div>
+</main>
+
+
+  <footer>
+
+  </footer>
+  <script src="http://maps.google.com/maps/api/js"></script>
+    <script>
+        var x = document.getElementById("para");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        
+        function showPosition(position) {
+            //returns the coords to para assigned to x
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+
+            //Add marker to map
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            latlon = new google.maps.LatLng(lat, lon)
+
+            var myOptions = {
+                zoom:14,
+                center:latlon,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false,
+                navigationControlOptions:{
+                style:google.maps.NavigationControlStyle.SMALL}
+            }
+         
+            //new map and marker
+            var map = new google.maps.Map(document.getElementById("googleMap"), myOptions);
+            var marker = new google.maps.Marker({
+                position:latlon,
+                map:map,//add marker to map 
+                title:"You are here!"
+            });
+            
+        }
+
+
+
+        
+        </script>
+</body>
+</html>

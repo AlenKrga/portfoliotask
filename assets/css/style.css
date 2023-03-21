@@ -45,3 +45,10 @@ ul.topnav li.right {float: right;}
         
     }
 }
+
+#googleMap{
+  height:150px;
+  width:50%;
+  border: solid .5em;
+
+}
