@@ -52,3 +52,77 @@ ul.topnav li.right {float: right;}
   border: solid .5em;
 
 }
+/* this section is for Animation tab */
+.getbigger {
+  width: 100px;
+  height: 100px;
+  background: rgb(31, 162, 176);
+  transition: width 2s;
+  color: rgb(246, 246, 246);
+  text-align: center;
+}
+
+.getbigger:hover {
+  width: 200px;
+  height: 150px;
+  font-size: 1.5em;
+  transition: 0.9s;
+}
+/* click me button */
+#myDiv {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(42, 151, 178);
+  transition: width 2s, height 2s, transform 2s;
+}
+
+#myDiv.animate {
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+/* red blue green */
+#myDiv2 {
+  width: 145px;
+  height: 100px;
+  background-color: red;
+  transition: background-color 2s;
+}
+
+/* square moving around the screen */
+.square {
+  text-align: center;
+  line-height: 100px;
+  color: #000;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(15, 86, 210);
+  position: relative;
+  animation: square 3s ease 1s infinite normal none;
+}
+
+@keyframes square {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+  
+}
+

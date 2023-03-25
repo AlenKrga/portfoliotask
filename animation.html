@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="#">Animation</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+          <li><a href="geolocationapi.html">Geolocation API</a></li>
+          <li><a href="xmlhttprequest.html">XMLHttpRequest</a></li>
+          <li><a href="#">Web Sockets</a></li>
+          <li><a href="#">LocalStorage and Web worker</a></li>
+          <li><a href="#">Contact Form</a></li>
+        </ul>
+      </nav>
+<main>
+<div class="getbigger"> Check this hover effect</div>
+<br>
+<button id="myButton">Click me!</button>
+<div id="myDiv"></div>
+<br>
+
+<button id="redButton">Red</button>
+<button id="blueButton">Blue</button>
+<button id="greenButton">Green</button>
+<div id="myDiv2"></div>
+<br>
+<div class="square">Keyframes</div>
+</main>
+
+
+  <footer>
+
+  </footer>
+  <script>
+    const myButton = document.getElementById("myButton");
+    const myDiv = document.getElementById("myDiv");
+
+    myButton.addEventListener("click", function () {
+        myDiv.classList.toggle("animate");
+    });
+
+        const myDiv2 = document.getElementById("myDiv2");
+        const redButton = document.getElementById("redButton");
+        const blueButton = document.getElementById("blueButton");
+        const greenButton = document.getElementById("greenButton");
+
+        redButton.addEventListener("click", function () {
+            myDiv2.style.backgroundColor = "red";
+        });
+
+        blueButton.addEventListener("click", function () {
+            myDiv2.style.backgroundColor = "blue";
+        });
+
+        greenButton.addEventListener("click", function () {
+            myDiv2.style.backgroundColor = "green";
+        });
+
+
+  </script>
+</body>
+</html>
