@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="animation.html">Animation</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+          <li><a href="geolocationapi.html">Geolocation API</a></li>
+          <li><a href="xmlhttprequest.html">XMLHttpRequest</a></li>
+          <li><a href="websocket.html">Web Sockets</a></li>
+          <li><a href="storageandworker.html">LocalStorage and Web worker</a></li>
+          <li><a class="active" href="#">Contact Form</a></li>
+        </ul>
+      </nav>
+<main>
+  <article>
+    <h1>HTML5 Form</h1>
+    <h2>With JavaScript validation </h2>
+    <form class="contact-us-form" onsubmit="return validateForm()">
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="First Name"
+        /><br />
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="Last Name"
+        /><br />
+        <input type="text" name="email" id="email" placeholder="E-mail" /><br />
+        <textarea type="text" id="message" placeholder="Your Message"></textarea
+        ><br />
+        <button type="submit" value="Submit" class="btn">Submit</button>
+      </form>
+    </main>
+    <script src="assets/js/form.js"></script>
+     </article>
+</main>
+
+
+  <footer>
+
+  </footer>
+</body>
+</html>
