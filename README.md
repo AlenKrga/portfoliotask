@@ -17,7 +17,8 @@ This repository contains code for web development tasks, including:
 
 ## Setup
 
-To run the code, simply navigate to the corresponding directory and open the `index.html` file in your web browser or click [HERE.](https://alenkrga.github.io/portfoliotask/ "HERE." target="_blank")
+To run the code, simply navigate to the corresponding directory and open the `index.html` file in your web browser or click <a href="https://alenkrga.github.io/portfoliotask/" target="_blank">HERE.</a>
+
 
 ## Credits
 
