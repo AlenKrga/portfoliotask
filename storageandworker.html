@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="animation.html">Animation</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+          <li><a href="geolocationapi.html">Geolocation API</a></li>
+          <li><a href="xmlhttprequest.html">XMLHttpRequest</a></li>
+          <li><a href="websocket.html">Web Sockets</a></li>
+          <li><a class="active" href="#">LocalStorage and Web worker</a></li>
+          <li><a href="#">Contact Form</a></li>
+        </ul>
+      </nav>
+<main>
+  <article>
+    <body>
+     
+        <h1>Grocery list</h1>
+        <h3>Local storage example</h3>
+        <label for="input">Enter list to buy:</label>
+        <input type="text" id="input">
+        <button onclick="saveData()">Save</button>
+        <button onclick="clearData()">Clear</button>
+        <br>
+        <ol id="output"></ol>
+        <h4><p>Lets check how fast you can find all items in store</p></h4>
+        <h5><p>We will use for counting web worker</p></h5>
+        <p>Count seconds: <output id="result"></output></p>
+        <button onclick="startWorker()">Start Worker</button> 
+        <button onclick="stopWorker()">Stop Worker</button>
+        
+        <script src="assets/js/localstorage.js">
+
+        </script>
+        <script>
+var w;
+
+function startWorker() {
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(w) == "undefined") {
+      w = new Worker("assets/js/webworker.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+  }
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}          
+        </script>
+
+ </article>
+</main>
+
+
+  <footer>
+
+  </footer>
+</body>
+</html>
