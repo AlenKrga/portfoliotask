@@ -35,7 +35,12 @@
             <th>Title</th>
             <th>Year of release</th>
           </tr>
-        </table></article>
+        </table>
+        <div id="div1"><h2>Let jQuery AJAX Change This Text to top selling PlayStation 2 games</h2></div>
+
+        <button>Top Selling Playstation 2 games!</button>
+      </article>
+        
 </main>
 
 
@@ -43,6 +48,14 @@
 
   </footer>
   <script src="assets/js/games.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("assets/xml/games2.txt ");
+  });
+});
+</script>
 
 </body>
 </html>
