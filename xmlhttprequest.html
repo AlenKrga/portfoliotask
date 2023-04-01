@@ -53,10 +53,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+  $("#ps1-button").click(function(){
+    $("#games").toggle();
+  });
+
   $("#ps2-button").click(function(){
-    $("#div1").load("assets/xml/games2.txt ");
+    $("#div1").toggle(); // toggle the display of #div1 on each click
+    $("#div1").load("assets/xml/games2.txt "); // load the content of the file on each click
   });
 });
+
 </script>
 
 </body>
