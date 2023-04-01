@@ -25,3 +25,5 @@ To run the code, simply navigate to the corresponding directory and open the `in
 This code was created as part of a web development course project. Feel free to use it as a reference or starting point for your own web development projects. If you have any questions or suggestions, please feel free to reach out to me.
 
 In the index.html file is implemented an animated background using the web tool  [Finisher Animated Header.](https://finisher.co/lab/header/ "Finisher Animated Header.") This tool generates CSS and HTML code for a header animated background.
+
+Many thanks to @Irishcalypso for her amazing tutoring skills and patience with students. Her dedication and expertise have been instrumental in helping us succeed in our learning journey.
